@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/canal-river-low.obj-6c4e148d91f77f3cf1457ce554808e54.mesh"
+
+[deps]
+
+files=[ "res://.import/canal-river-low.obj-6c4e148d91f77f3cf1457ce554808e54.mesh" ]
+
+source_file="res://blenders/landscape_asset_v2a/obj/canal-river-low.obj"
+dest_files=[ "res://.import/canal-river-low.obj-6c4e148d91f77f3cf1457ce554808e54.mesh", "res://.import/canal-river-low.obj-6c4e148d91f77f3cf1457ce554808e54.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

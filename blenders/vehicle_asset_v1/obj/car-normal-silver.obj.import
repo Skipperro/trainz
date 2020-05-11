@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/car-normal-silver.obj-fe15bdf4f2cdb3b1527e688222fb2bce.mesh"
+
+[deps]
+
+files=[ "res://.import/car-normal-silver.obj-fe15bdf4f2cdb3b1527e688222fb2bce.mesh" ]
+
+source_file="res://blenders/vehicle_asset_v1/obj/car-normal-silver.obj"
+dest_files=[ "res://.import/car-normal-silver.obj-fe15bdf4f2cdb3b1527e688222fb2bce.mesh", "res://.import/car-normal-silver.obj-fe15bdf4f2cdb3b1527e688222fb2bce.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

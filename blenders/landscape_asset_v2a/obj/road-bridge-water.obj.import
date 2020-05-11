@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/road-bridge-water.obj-8b1f86a07fb4c4a696ba6910981ca2e8.mesh"
+
+[deps]
+
+files=[ "res://.import/road-bridge-water.obj-8b1f86a07fb4c4a696ba6910981ca2e8.mesh" ]
+
+source_file="res://blenders/landscape_asset_v2a/obj/road-bridge-water.obj"
+dest_files=[ "res://.import/road-bridge-water.obj-8b1f86a07fb4c4a696ba6910981ca2e8.mesh", "res://.import/road-bridge-water.obj-8b1f86a07fb4c4a696ba6910981ca2e8.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

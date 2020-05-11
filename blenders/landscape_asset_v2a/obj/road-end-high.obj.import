@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/road-end-high.obj-9ef2b8aa5d5f558bcd89a0d9926cd6c1.mesh"
+
+[deps]
+
+files=[ "res://.import/road-end-high.obj-9ef2b8aa5d5f558bcd89a0d9926cd6c1.mesh" ]
+
+source_file="res://blenders/landscape_asset_v2a/obj/road-end-high.obj"
+dest_files=[ "res://.import/road-end-high.obj-9ef2b8aa5d5f558bcd89a0d9926cd6c1.mesh", "res://.import/road-end-high.obj-9ef2b8aa5d5f558bcd89a0d9926cd6c1.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

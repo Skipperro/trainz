@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/canal-straight-low.obj-dfbf17ca8f4b903e24aaa21c106f56d8.mesh"
+
+[deps]
+
+files=[ "res://.import/canal-straight-low.obj-dfbf17ca8f4b903e24aaa21c106f56d8.mesh" ]
+
+source_file="res://blenders/landscape_asset_v2a/obj/canal-straight-low.obj"
+dest_files=[ "res://.import/canal-straight-low.obj-dfbf17ca8f4b903e24aaa21c106f56d8.mesh", "res://.import/canal-straight-low.obj-dfbf17ca8f4b903e24aaa21c106f56d8.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

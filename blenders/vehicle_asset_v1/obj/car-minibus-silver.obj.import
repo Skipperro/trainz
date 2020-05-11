@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/car-minibus-silver.obj-d1ccb6237bd80ece095858e8eb23bdb9.mesh"
+
+[deps]
+
+files=[ "res://.import/car-minibus-silver.obj-d1ccb6237bd80ece095858e8eb23bdb9.mesh" ]
+
+source_file="res://blenders/vehicle_asset_v1/obj/car-minibus-silver.obj"
+dest_files=[ "res://.import/car-minibus-silver.obj-d1ccb6237bd80ece095858e8eb23bdb9.mesh", "res://.import/car-minibus-silver.obj-d1ccb6237bd80ece095858e8eb23bdb9.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

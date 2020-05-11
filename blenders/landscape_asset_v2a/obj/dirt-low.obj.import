@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/dirt-low.obj-fefd1cc3a26f256439e96f15f0276a24.mesh"
+
+[deps]
+
+files=[ "res://.import/dirt-low.obj-fefd1cc3a26f256439e96f15f0276a24.mesh" ]
+
+source_file="res://blenders/landscape_asset_v2a/obj/dirt-low.obj"
+dest_files=[ "res://.import/dirt-low.obj-fefd1cc3a26f256439e96f15f0276a24.mesh", "res://.import/dirt-low.obj-fefd1cc3a26f256439e96f15f0276a24.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

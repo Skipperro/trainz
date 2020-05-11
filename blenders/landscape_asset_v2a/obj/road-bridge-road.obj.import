@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/road-bridge-road.obj-27e195b29ebae2433c8514176e3915be.mesh"
+
+[deps]
+
+files=[ "res://.import/road-bridge-road.obj-27e195b29ebae2433c8514176e3915be.mesh" ]
+
+source_file="res://blenders/landscape_asset_v2a/obj/road-bridge-road.obj"
+dest_files=[ "res://.import/road-bridge-road.obj-27e195b29ebae2433c8514176e3915be.mesh", "res://.import/road-bridge-road.obj-27e195b29ebae2433c8514176e3915be.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

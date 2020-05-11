@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/house-country.obj-967d9ffd6941f847422a9e1e52ae2d75.mesh"
+
+[deps]
+
+files=[ "res://.import/house-country.obj-967d9ffd6941f847422a9e1e52ae2d75.mesh" ]
+
+source_file="res://blenders/suburb_assets_pt1/models/house-country.obj"
+dest_files=[ "res://.import/house-country.obj-967d9ffd6941f847422a9e1e52ae2d75.mesh", "res://.import/house-country.obj-967d9ffd6941f847422a9e1e52ae2d75.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

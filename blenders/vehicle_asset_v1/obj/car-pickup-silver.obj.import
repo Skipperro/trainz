@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/car-pickup-silver.obj-dd6dc2bddcac07c9201dd47026d540d4.mesh"
+
+[deps]
+
+files=[ "res://.import/car-pickup-silver.obj-dd6dc2bddcac07c9201dd47026d540d4.mesh" ]
+
+source_file="res://blenders/vehicle_asset_v1/obj/car-pickup-silver.obj"
+dest_files=[ "res://.import/car-pickup-silver.obj-dd6dc2bddcac07c9201dd47026d540d4.mesh", "res://.import/car-pickup-silver.obj-dd6dc2bddcac07c9201dd47026d540d4.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

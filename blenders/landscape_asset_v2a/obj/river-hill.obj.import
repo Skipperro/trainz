@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/river-hill.obj-8e60d62fae0249cd55c61191fdd983e0.mesh"
+
+[deps]
+
+files=[ "res://.import/river-hill.obj-8e60d62fae0249cd55c61191fdd983e0.mesh" ]
+
+source_file="res://blenders/landscape_asset_v2a/obj/river-hill.obj"
+dest_files=[ "res://.import/river-hill.obj-8e60d62fae0249cd55c61191fdd983e0.mesh", "res://.import/river-hill.obj-8e60d62fae0249cd55c61191fdd983e0.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/river-end-low.obj-140072f0024fd779c9b622eb3f07f07c.mesh"
+
+[deps]
+
+files=[ "res://.import/river-end-low.obj-140072f0024fd779c9b622eb3f07f07c.mesh" ]
+
+source_file="res://blenders/landscape_asset_v2a/obj/river-end-low.obj"
+dest_files=[ "res://.import/river-end-low.obj-140072f0024fd779c9b622eb3f07f07c.mesh", "res://.import/river-end-low.obj-140072f0024fd779c9b622eb3f07f07c.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

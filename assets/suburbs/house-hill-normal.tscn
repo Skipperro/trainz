@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://blenders/suburb_assets_pt1/models/house-hill-normal.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://assets/building.gd" type="Script" id=2]
+
+[node name="house-hill-normal" type="MeshInstance"]
+use_in_baked_light = true
+mesh = ExtResource( 1 )
+material/0 = null
+script = ExtResource( 2 )
+
+[node name="lights" type="Spatial" parent="."]
+visible = false
+
+[node name="OmniLight" type="OmniLight" parent="lights"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.60847, 2.94307 )
+omni_range = 4.37167
+omni_attenuation = 0.0490366
+
+[node name="OmniLight2" type="OmniLight" parent="lights"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.10956, 3.21704, -3.43524 )
+omni_range = 1.80002
+omni_attenuation = 0.392292

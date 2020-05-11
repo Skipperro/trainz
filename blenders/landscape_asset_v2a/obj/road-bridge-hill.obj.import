@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/road-bridge-hill.obj-456f1662fe98f5d36f7253972779aff9.mesh"
+
+[deps]
+
+files=[ "res://.import/road-bridge-hill.obj-456f1662fe98f5d36f7253972779aff9.mesh" ]
+
+source_file="res://blenders/landscape_asset_v2a/obj/road-bridge-hill.obj"
+dest_files=[ "res://.import/road-bridge-hill.obj-456f1662fe98f5d36f7253972779aff9.mesh", "res://.import/road-bridge-hill.obj-456f1662fe98f5d36f7253972779aff9.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

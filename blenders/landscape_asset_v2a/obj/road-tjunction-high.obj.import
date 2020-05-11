@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/road-tjunction-high.obj-0f656ee4171682be41b9c21f468809c6.mesh"
+
+[deps]
+
+files=[ "res://.import/road-tjunction-high.obj-0f656ee4171682be41b9c21f468809c6.mesh" ]
+
+source_file="res://blenders/landscape_asset_v2a/obj/road-tjunction-high.obj"
+dest_files=[ "res://.import/road-tjunction-high.obj-0f656ee4171682be41b9c21f468809c6.mesh", "res://.import/road-tjunction-high.obj-0f656ee4171682be41b9c21f468809c6.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

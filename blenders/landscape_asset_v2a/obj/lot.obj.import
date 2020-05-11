@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/lot.obj-50b2af3569dcb639d7272ad5c67d54e9.mesh"
+
+[deps]
+
+files=[ "res://.import/lot.obj-50b2af3569dcb639d7272ad5c67d54e9.mesh" ]
+
+source_file="res://blenders/landscape_asset_v2a/obj/lot.obj"
+dest_files=[ "res://.import/lot.obj-50b2af3569dcb639d7272ad5c67d54e9.mesh", "res://.import/lot.obj-50b2af3569dcb639d7272ad5c67d54e9.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

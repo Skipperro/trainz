@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/river-corner-low.obj-9fae585d032b61f94afb4a4acb9eee3b.mesh"
+
+[deps]
+
+files=[ "res://.import/river-corner-low.obj-9fae585d032b61f94afb4a4acb9eee3b.mesh" ]
+
+source_file="res://blenders/landscape_asset_v2a/obj/river-corner-low.obj"
+dest_files=[ "res://.import/river-corner-low.obj-9fae585d032b61f94afb4a4acb9eee3b.mesh", "res://.import/river-corner-low.obj-9fae585d032b61f94afb4a4acb9eee3b.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

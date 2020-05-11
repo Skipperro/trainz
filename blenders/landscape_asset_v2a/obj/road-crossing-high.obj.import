@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/road-crossing-high.obj-3f40b69a9f37ee978c82006096664bad.mesh"
+
+[deps]
+
+files=[ "res://.import/road-crossing-high.obj-3f40b69a9f37ee978c82006096664bad.mesh" ]
+
+source_file="res://blenders/landscape_asset_v2a/obj/road-crossing-high.obj"
+dest_files=[ "res://.import/road-crossing-high.obj-3f40b69a9f37ee978c82006096664bad.mesh", "res://.import/road-crossing-high.obj-3f40b69a9f37ee978c82006096664bad.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

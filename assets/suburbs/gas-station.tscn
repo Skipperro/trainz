@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://blenders/suburb_assets_pt1/models/gas-station.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://assets/building.gd" type="Script" id=2]
+
+[node name="gas-station" type="MeshInstance"]
+mesh = ExtResource( 1 )
+material/0 = null
+material/1 = null
+script = ExtResource( 2 )
+
+[node name="lights" type="Spatial" parent="."]
+visible = false
+
+[node name="SpotLight" type="SpotLight" parent="lights"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -2.80487, 2.7278, 0 )
+light_energy = 2.0
+spot_range = 11.7204
+spot_attenuation = 0.0426888
+spot_angle = 75.175
+
+[node name="SpotLight2" type="SpotLight" parent="lights"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 2.7161, 2.7278, 0 )
+light_energy = 2.0
+spot_range = 11.7204
+spot_attenuation = 0.0426888
+spot_angle = 75.175
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.919314, 0.393525, 0, -0.393525, 0.919314, 0, 4.20326, 9.04348 )

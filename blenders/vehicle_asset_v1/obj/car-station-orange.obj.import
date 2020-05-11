@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/car-station-orange.obj-000a35086defe23f00958dc426cb8752.mesh"
+
+[deps]
+
+files=[ "res://.import/car-station-orange.obj-000a35086defe23f00958dc426cb8752.mesh" ]
+
+source_file="res://blenders/vehicle_asset_v1/obj/car-station-orange.obj"
+dest_files=[ "res://.import/car-station-orange.obj-000a35086defe23f00958dc426cb8752.mesh", "res://.import/car-station-orange.obj-000a35086defe23f00958dc426cb8752.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/car-van-violet.obj-ca9e5eca30e97f864447d4b117c4505b.mesh"
+
+[deps]
+
+files=[ "res://.import/car-van-violet.obj-ca9e5eca30e97f864447d4b117c4505b.mesh" ]
+
+source_file="res://blenders/vehicle_asset_v1/obj/car-van-violet.obj"
+dest_files=[ "res://.import/car-van-violet.obj-ca9e5eca30e97f864447d4b117c4505b.mesh", "res://.import/car-van-violet.obj-ca9e5eca30e97f864447d4b117c4505b.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

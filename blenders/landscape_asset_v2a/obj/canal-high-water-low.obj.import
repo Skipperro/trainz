@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/canal-high-water-low.obj-8c88775ed2f6d05fe42d51d261fe23ed.mesh"
+
+[deps]
+
+files=[ "res://.import/canal-high-water-low.obj-8c88775ed2f6d05fe42d51d261fe23ed.mesh" ]
+
+source_file="res://blenders/landscape_asset_v2a/obj/canal-high-water-low.obj"
+dest_files=[ "res://.import/canal-high-water-low.obj-8c88775ed2f6d05fe42d51d261fe23ed.mesh", "res://.import/canal-high-water-low.obj-8c88775ed2f6d05fe42d51d261fe23ed.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

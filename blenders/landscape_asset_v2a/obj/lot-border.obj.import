@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/lot-border.obj-55d75947fa0fc904e2723405d9e81c19.mesh"
+
+[deps]
+
+files=[ "res://.import/lot-border.obj-55d75947fa0fc904e2723405d9e81c19.mesh" ]
+
+source_file="res://blenders/landscape_asset_v2a/obj/lot-border.obj"
+dest_files=[ "res://.import/lot-border.obj-55d75947fa0fc904e2723405d9e81c19.mesh", "res://.import/lot-border.obj-55d75947fa0fc904e2723405d9e81c19.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

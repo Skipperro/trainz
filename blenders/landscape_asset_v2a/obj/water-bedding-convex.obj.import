@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/water-bedding-convex.obj-0948f6233e7a177ac1c82fa82680a71d.mesh"
+
+[deps]
+
+files=[ "res://.import/water-bedding-convex.obj-0948f6233e7a177ac1c82fa82680a71d.mesh" ]
+
+source_file="res://blenders/landscape_asset_v2a/obj/water-bedding-convex.obj"
+dest_files=[ "res://.import/water-bedding-convex.obj-0948f6233e7a177ac1c82fa82680a71d.mesh", "res://.import/water-bedding-convex.obj-0948f6233e7a177ac1c82fa82680a71d.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

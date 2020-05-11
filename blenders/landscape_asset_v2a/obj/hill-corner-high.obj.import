@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/hill-corner-high.obj-b84bed1b10356ca27f81f21ae62a3ad7.mesh"
+
+[deps]
+
+files=[ "res://.import/hill-corner-high.obj-b84bed1b10356ca27f81f21ae62a3ad7.mesh" ]
+
+source_file="res://blenders/landscape_asset_v2a/obj/hill-corner-high.obj"
+dest_files=[ "res://.import/hill-corner-high.obj-b84bed1b10356ca27f81f21ae62a3ad7.mesh", "res://.import/hill-corner-high.obj-b84bed1b10356ca27f81f21ae62a3ad7.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

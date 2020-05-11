@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/car-mpv-citrus.obj-39b59dabe7f6b1db135960ca255f5fa6.mesh"
+
+[deps]
+
+files=[ "res://.import/car-mpv-citrus.obj-39b59dabe7f6b1db135960ca255f5fa6.mesh" ]
+
+source_file="res://blenders/vehicle_asset_v1/obj/car-mpv-citrus.obj"
+dest_files=[ "res://.import/car-mpv-citrus.obj-39b59dabe7f6b1db135960ca255f5fa6.mesh", "res://.import/car-mpv-citrus.obj-39b59dabe7f6b1db135960ca255f5fa6.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

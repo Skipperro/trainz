@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/car-hatchback-violet.obj-9522e4ed47c3137ab2c6a1161ab32b9e.mesh"
+
+[deps]
+
+files=[ "res://.import/car-hatchback-violet.obj-9522e4ed47c3137ab2c6a1161ab32b9e.mesh" ]
+
+source_file="res://blenders/vehicle_asset_v1/obj/car-hatchback-violet.obj"
+dest_files=[ "res://.import/car-hatchback-violet.obj-9522e4ed47c3137ab2c6a1161ab32b9e.mesh", "res://.import/car-hatchback-violet.obj-9522e4ed47c3137ab2c6a1161ab32b9e.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

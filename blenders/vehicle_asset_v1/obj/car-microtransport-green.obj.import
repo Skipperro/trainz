@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/car-microtransport-green.obj-3b1dbf46c061e0a91d03e9086df2307f.mesh"
+
+[deps]
+
+files=[ "res://.import/car-microtransport-green.obj-3b1dbf46c061e0a91d03e9086df2307f.mesh" ]
+
+source_file="res://blenders/vehicle_asset_v1/obj/car-microtransport-green.obj"
+dest_files=[ "res://.import/car-microtransport-green.obj-3b1dbf46c061e0a91d03e9086df2307f.mesh", "res://.import/car-microtransport-green.obj-3b1dbf46c061e0a91d03e9086df2307f.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

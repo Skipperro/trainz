@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/road-straight-high.obj-37e0a6ee283cd9c035b60f34b7bee4ef.mesh"
+
+[deps]
+
+files=[ "res://.import/road-straight-high.obj-37e0a6ee283cd9c035b60f34b7bee4ef.mesh" ]
+
+source_file="res://blenders/landscape_asset_v2a/obj/road-straight-high.obj"
+dest_files=[ "res://.import/road-straight-high.obj-37e0a6ee283cd9c035b60f34b7bee4ef.mesh", "res://.import/road-straight-high.obj-37e0a6ee283cd9c035b60f34b7bee4ef.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

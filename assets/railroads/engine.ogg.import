@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/engine.ogg-774def864ea444236a3322ef3f98a904.oggstr"
+
+[deps]
+
+source_file="res://assets/railroads/engine.ogg"
+dest_files=[ "res://.import/engine.ogg-774def864ea444236a3322ef3f98a904.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

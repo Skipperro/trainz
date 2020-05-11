@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/canal-hill.obj-4fb48048c5645bb17b8950dde7701666.mesh"
+
+[deps]
+
+files=[ "res://.import/canal-hill.obj-4fb48048c5645bb17b8950dde7701666.mesh" ]
+
+source_file="res://blenders/landscape_asset_v2a/obj/canal-hill.obj"
+dest_files=[ "res://.import/canal-hill.obj-4fb48048c5645bb17b8950dde7701666.mesh", "res://.import/canal-hill.obj-4fb48048c5645bb17b8950dde7701666.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true
