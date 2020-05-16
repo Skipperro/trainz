@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/tree-round.obj-7685002eba3a057b189a0117b43e1d99.mesh"
+
+[deps]
+
+files=[ "res://.import/tree-round.obj-7685002eba3a057b189a0117b43e1d99.mesh" ]
+
+source_file="res://blenders/tree-pack/obj_mtl/tree-round.obj"
+dest_files=[ "res://.import/tree-round.obj-7685002eba3a057b189a0117b43e1d99.mesh", "res://.import/tree-round.obj-7685002eba3a057b189a0117b43e1d99.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

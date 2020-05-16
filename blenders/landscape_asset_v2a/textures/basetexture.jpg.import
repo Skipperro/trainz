@@ -3,16 +3,16 @@
 importer="texture"
 type="StreamTexture"
 path.s3tc="res://.import/basetexture.jpg-be9195d3e1f2f8f9db9bd136ab4c7c7a.s3tc.stex"
-path.etc="res://.import/basetexture.jpg-be9195d3e1f2f8f9db9bd136ab4c7c7a.etc.stex"
+path.etc2="res://.import/basetexture.jpg-be9195d3e1f2f8f9db9bd136ab4c7c7a.etc2.stex"
 metadata={
-"imported_formats": [ "s3tc", "etc" ],
+"imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://blenders/landscape_asset_v2a/textures/basetexture.jpg"
-dest_files=[ "res://.import/basetexture.jpg-be9195d3e1f2f8f9db9bd136ab4c7c7a.s3tc.stex", "res://.import/basetexture.jpg-be9195d3e1f2f8f9db9bd136ab4c7c7a.etc.stex" ]
+dest_files=[ "res://.import/basetexture.jpg-be9195d3e1f2f8f9db9bd136ab4c7c7a.s3tc.stex", "res://.import/basetexture.jpg-be9195d3e1f2f8f9db9bd136ab4c7c7a.etc2.stex" ]
 
 [params]
 

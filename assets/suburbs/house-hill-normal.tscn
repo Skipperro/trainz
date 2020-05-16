@@ -1,12 +1,13 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://blenders/suburb_assets_pt1/models/house-hill-normal.obj" type="ArrayMesh" id=1]
 [ext_resource path="res://assets/building.gd" type="Script" id=2]
+[ext_resource path="res://assets/base_material.tres" type="Material" id=3]
 
 [node name="house-hill-normal" type="MeshInstance"]
 use_in_baked_light = true
 mesh = ExtResource( 1 )
-material/0 = null
+material/0 = ExtResource( 3 )
 script = ExtResource( 2 )
 
 [node name="lights" type="Spatial" parent="."]

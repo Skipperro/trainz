@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/tree-conical.obj-1b50cf0ba7768969e24e5a77d0b0ef4b.mesh"
+
+[deps]
+
+files=[ "res://.import/tree-conical.obj-1b50cf0ba7768969e24e5a77d0b0ef4b.mesh" ]
+
+source_file="res://blenders/tree-pack/obj_mtl/tree-conical.obj"
+dest_files=[ "res://.import/tree-conical.obj-1b50cf0ba7768969e24e5a77d0b0ef4b.mesh", "res://.import/tree-conical.obj-1b50cf0ba7768969e24e5a77d0b0ef4b.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://blenders/suburb_assets_pt1/models/road-straight-house-2-low.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://assets/base_material.tres" type="Material" id=2]
+
+[node name="road_straight_low_B" type="Spatial"]
+
+[node name="road" type="MeshInstance" parent="."]
+mesh = ExtResource( 1 )
+material/0 = ExtResource( 2 )

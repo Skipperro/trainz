@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://blenders/rail_basic_v1/basecolor.material" type="Material" id=1]
+[ext_resource path="res://assets/base_material.tres" type="Material" id=1]
 [ext_resource path="res://assets/railroads/railguide.gd" type="Script" id=2]
 
 [sub_resource type="ArrayMesh" id=1]

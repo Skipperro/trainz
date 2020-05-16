@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/tree-columnar.obj-8a174e82412cac707b4d62a20b7a7341.mesh"
+
+[deps]
+
+files=[ "res://.import/tree-columnar.obj-8a174e82412cac707b4d62a20b7a7341.mesh" ]
+
+source_file="res://blenders/tree-pack/obj_mtl/tree-columnar.obj"
+dest_files=[ "res://.import/tree-columnar.obj-8a174e82412cac707b4d62a20b7a7341.mesh", "res://.import/tree-columnar.obj-8a174e82412cac707b4d62a20b7a7341.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

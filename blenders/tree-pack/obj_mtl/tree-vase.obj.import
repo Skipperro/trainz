@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/tree-vase.obj-7309a2fe91d00d3bc1d17664e6d511bb.mesh"
+
+[deps]
+
+files=[ "res://.import/tree-vase.obj-7309a2fe91d00d3bc1d17664e6d511bb.mesh" ]
+
+source_file="res://blenders/tree-pack/obj_mtl/tree-vase.obj"
+dest_files=[ "res://.import/tree-vase.obj-7309a2fe91d00d3bc1d17664e6d511bb.mesh", "res://.import/tree-vase.obj-7309a2fe91d00d3bc1d17664e6d511bb.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

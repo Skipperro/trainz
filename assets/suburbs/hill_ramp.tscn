@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/base_material.tres" type="Material" id=1]
+[ext_resource path="res://blenders/landscape_asset_v2a/obj/hill-ramp.obj" type="ArrayMesh" id=2]
+[ext_resource path="res://assets/tree-meshes/tree-columnar.obj" type="ArrayMesh" id=3]
+[ext_resource path="res://assets/suburbs/grass.gd" type="Script" id=4]
+
+[node name="hill_ramp" type="MeshInstance"]
+mesh = ExtResource( 2 )
+material/0 = ExtResource( 1 )
+script = ExtResource( 4 )
+
+[node name="treespawner" type="Spatial" parent="."]
+transform = Transform( 0.965926, -0.258819, 0, 0.258819, 0.965926, 0, 0, 0, 1, 0, 1.78288, 0 )
+visible = false
+
+[node name="tree" type="MeshInstance" parent="treespawner"]
+transform = Transform( 0.676148, 0.181173, 0, -0.181173, 0.676148, 0, 0, 0, 0.7, 0, 0, 0 )
+mesh = ExtResource( 3 )
+material/0 = null
+material/1 = null

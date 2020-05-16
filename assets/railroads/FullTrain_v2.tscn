@@ -1,6 +1,77 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=7 format=2]
 
+[ext_resource path="res://assets/railroads/engine.ogg" type="AudioStream" id=1]
+[ext_resource path="res://assets/throttle.png" type="Texture" id=2]
+[ext_resource path="res://assets/railroads/progressbar_white.tres" type="StyleBox" id=3]
 [ext_resource path="res://assets/railroads/FullTrain_v2.gd" type="Script" id=8]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.6, 0.6, 0.6, 0.380392 )
+
+[sub_resource type="StyleBoxEmpty" id=2]
 
 [node name="FullTrain_v2" type="Spatial"]
 script = ExtResource( 8 )
+
+[node name="EngineSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+
+[node name="cammount" type="Spatial" parent="."]
+
+[node name="cammount" type="Spatial" parent="cammount"]
+transform = Transform( -0.707107, 0.5, -0.5, 0, 0.707107, 0.707107, 0.707107, 0.5, -0.5, 0, 0, 0 )
+
+[node name="Camera" type="Camera" parent="cammount/cammount"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 40 )
+projection = 1
+current = true
+size = 40.0
+near = 0.01
+
+[node name="Control" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ProgressBar" type="ProgressBar" parent="Control"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -173.525
+margin_top = -91.3553
+margin_right = 248.475
+margin_bottom = -78.3553
+rect_rotation = -90.0
+mouse_default_cursor_shape = 2
+custom_styles/fg = ExtResource( 3 )
+custom_styles/bg = SubResource( 1 )
+max_value = 1.0
+step = 0.001
+value = 0.5
+percent_visible = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VSlider" type="VSlider" parent="Control"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -246.525
+margin_top = -530.355
+margin_right = -88.5249
+margin_bottom = -72.3553
+mouse_default_cursor_shape = 2
+custom_icons/grabber_disabled = ExtResource( 2 )
+custom_icons/grabber_highlight = ExtResource( 2 )
+custom_icons/grabber = ExtResource( 2 )
+custom_styles/slider = SubResource( 2 )
+max_value = 1.0
+step = 0.001
+__meta__ = {
+"_edit_use_anchors_": false
+}
