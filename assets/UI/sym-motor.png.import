@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/rpg-screen.png-c99587a3764cd5d891a72a3de1ed80e6.stex"
+path="res://.import/sym-motor.png-26844d7983ff8c4d5ee291e74df66c4c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://rpg-screen.png"
-dest_files=[ "res://.import/rpg-screen.png-c99587a3764cd5d891a72a3de1ed80e6.stex" ]
+source_file="res://assets/UI/sym-motor.png"
+dest_files=[ "res://.import/sym-motor.png-26844d7983ff8c4d5ee291e74df66c4c.stex" ]
 
 [params]
 

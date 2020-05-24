@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://assets/railroads/engine.ogg" type="AudioStream" id=1]
 [ext_resource path="res://assets/throttle.png" type="Texture" id=2]
@@ -16,6 +16,8 @@
 [ext_resource path="res://assets/UI/commuter.png" type="Texture" id=14]
 [ext_resource path="res://fonts/montreal/Montreal.tres" type="DynamicFont" id=15]
 [ext_resource path="res://assets/UI/train.png" type="Texture" id=16]
+[ext_resource path="res://assets/UI/money_32.png" type="Texture" id=17]
+[ext_resource path="res://assets/UI/dooropen.png" type="Texture" id=18]
 
 [sub_resource type="ViewportTexture" id=1]
 viewport_path = NodePath("cammount/cammount/DynaRes/MainViewport")
@@ -216,6 +218,21 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="door" type="Button" parent="Control/Control"]
+visible = false
+margin_left = 584.0
+margin_top = 17.0
+margin_right = 724.0
+margin_bottom = 151.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+enabled_focus_mode = 0
+icon = ExtResource( 18 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="SwitchSound" type="AudioStreamPlayer" parent="Control/Control"]
 stream = ExtResource( 9 )
 
@@ -307,10 +324,10 @@ __meta__ = {
 
 [node name="Com1" type="TextureRect" parent="Control/TLCorner"]
 self_modulate = Color( 1, 0, 0, 1 )
-margin_left = 320.0
-margin_top = 6.998
-margin_right = 352.0
-margin_bottom = 38.998
+margin_left = 151.813
+margin_top = 10.1713
+margin_right = 183.813
+margin_bottom = 42.1713
 texture = ExtResource( 14 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -329,10 +346,10 @@ __meta__ = {
 
 [node name="Com2" type="TextureRect" parent="Control/TLCorner"]
 self_modulate = Color( 0, 1, 0, 1 )
-margin_left = 420.0
-margin_top = 6.998
-margin_right = 452.0
-margin_bottom = 38.998
+margin_left = 251.813
+margin_top = 10.1713
+margin_right = 283.813
+margin_bottom = 42.1713
 texture = ExtResource( 14 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -351,10 +368,10 @@ __meta__ = {
 
 [node name="Com3" type="TextureRect" parent="Control/TLCorner"]
 self_modulate = Color( 0, 0, 1, 1 )
-margin_left = 520.0
-margin_top = 6.998
-margin_right = 552.0
-margin_bottom = 38.998
+margin_left = 351.813
+margin_top = 10.1713
+margin_right = 383.813
+margin_bottom = 42.1713
 texture = ExtResource( 14 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -373,10 +390,10 @@ __meta__ = {
 
 [node name="Com4" type="TextureRect" parent="Control/TLCorner"]
 self_modulate = Color( 1, 1, 0, 1 )
-margin_left = 620.0
-margin_top = 6.998
-margin_right = 652.0
-margin_bottom = 38.998
+margin_left = 451.813
+margin_top = 10.1713
+margin_right = 483.813
+margin_bottom = 42.1713
 texture = ExtResource( 14 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -395,10 +412,10 @@ __meta__ = {
 
 [node name="Com5" type="TextureRect" parent="Control/TLCorner"]
 self_modulate = Color( 1, 0, 1, 1 )
-margin_left = 720.0
-margin_top = 6.998
-margin_right = 752.0
-margin_bottom = 38.998
+margin_left = 551.813
+margin_top = 10.1713
+margin_right = 583.813
+margin_bottom = 42.1713
 texture = ExtResource( 14 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -417,10 +434,10 @@ __meta__ = {
 
 [node name="Com6" type="TextureRect" parent="Control/TLCorner"]
 self_modulate = Color( 0, 1, 1, 1 )
-margin_left = 820.0
-margin_top = 6.998
-margin_right = 852.0
-margin_bottom = 38.998
+margin_left = 651.813
+margin_top = 10.1713
+margin_right = 683.813
+margin_bottom = 42.1713
 texture = ExtResource( 14 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -438,10 +455,10 @@ __meta__ = {
 }
 
 [node name="Com7" type="TextureRect" parent="Control/TLCorner"]
-margin_left = 1000.0
-margin_top = 9.998
-margin_right = 1090.0
-margin_bottom = 41.998
+margin_left = 831.813
+margin_top = 13.1713
+margin_right = 921.813
+margin_bottom = 45.1713
 texture = ExtResource( 16 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -453,8 +470,30 @@ margin_top = -6.0
 margin_right = 186.0
 margin_bottom = 34.0
 custom_fonts/font = ExtResource( 15 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "100%"
-align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Money" type="TextureRect" parent="Control/TLCorner"]
+margin_left = 1100.0
+margin_top = 13.0
+margin_right = 1132.0
+margin_bottom = 45.0
+texture = ExtResource( 17 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Control/TLCorner/Money"]
+margin_left = 42.0
+margin_top = -6.0
+margin_right = 220.0
+margin_bottom = 34.0
+custom_fonts/font = ExtResource( 15 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "0"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -464,6 +503,8 @@ margin_left = -6.0
 margin_top = -3.0
 margin_right = 134.0
 margin_bottom = 131.0
+focus_mode = 0
+enabled_focus_mode = 0
 icon = ExtResource( 4 )
 flat = true
 [connection signal="timeout" from="cammount/cammount/DynaRes/MainViewport/Camera/MiniMapViewport/Timer" to="." method="_on_Viewport_timeout"]
@@ -473,4 +514,5 @@ flat = true
 [connection signal="pressed" from="Control/Control/straight" to="." method="switch_direction" binds= [ 2 ]]
 [connection signal="gui_input" from="Control/Control/right" to="." method="_on_direction_touch" binds= [ 3 ]]
 [connection signal="pressed" from="Control/Control/right" to="." method="switch_direction" binds= [ 3 ]]
+[connection signal="pressed" from="Control/Control/door" to="." method="_on_door_pressed"]
 [connection signal="pressed" from="Control/TRCorner/MapButton" to="Control/Minimap" method="_on_MapButton_pressed"]

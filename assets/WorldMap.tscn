@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://assets/advanced/Forest-AreaA.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/advanced/CentralCity.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://assets/railroads/curve.tscn" type="PackedScene" id=5]
 [ext_resource path="res://assets/advanced/Forest-Area-Turn.tscn" type="PackedScene" id=6]
 [ext_resource path="res://assets/advanced/tunnel-areaA.tscn" type="PackedScene" id=7]
+[ext_resource path="res://assets/advanced/T-City.tscn" type="PackedScene" id=8]
 
 [node name="WorldMap" type="Spatial"]
 
@@ -19,10 +20,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 172, 0, 16 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 268, 0, 16 )
 
 [node name="ForestA16" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 172, 0, 408 )
-
-[node name="ForestA15" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 268, 0, 408 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 180, 0, 480 )
 
 [node name="ForestA11" parent="." instance=ExtResource( 1 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 368, 0, 116 )
@@ -45,6 +43,9 @@ transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -208, 0
 [node name="ForestA9" parent="." instance=ExtResource( 6 )]
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 8, 0, 372 )
 
+[node name="ForestA13" parent="." instance=ExtResource( 6 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 112, 0, 380 )
+
 [node name="ForestA17" parent="." instance=ExtResource( 6 )]
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -312, 0, 12 )
 
@@ -57,9 +58,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -212, 0, -88 )
 [node name="ForestA22" parent="." instance=ExtResource( 6 )]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -204, 0, -288 )
 
-[node name="ForestA14" parent="." instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 364, 0, 408 )
-
 [node name="ForestA10" parent="." instance=ExtResource( 6 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 368, 0, 20 )
 
@@ -69,46 +67,37 @@ transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3.0517
 [node name="GAPS" type="Spatial" parent="."]
 
 [node name="curve" parent="GAPS" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 120, 0, 408 )
-
-[node name="curve2" parent="GAPS" instance=ExtResource( 5 )]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 120, 0, 376 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 112, 0, 480 )
 
 [node name="straight" parent="GAPS" instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 120, 0, 384 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 112, 0, 456 )
+
+[node name="straight12" parent="GAPS" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 112, 0, 448 )
+
+[node name="straight13" parent="GAPS" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 112, 0, 440 )
+
+[node name="straight14" parent="GAPS" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 112, 0, 432 )
 
 [node name="straight2" parent="GAPS" instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 120, 0, 392 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 112, 0, 464 )
 
 [node name="straight3" parent="GAPS" instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 120, 0, 400 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 112, 0, 472 )
 
-[node name="straight4" parent="GAPS" instance=ExtResource( 4 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 112, 0, 376 )
+[node name="straight15" parent="GAPS" instance=ExtResource( 4 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 120, 0, 480 )
 
-[node name="straight5" parent="GAPS" instance=ExtResource( 4 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 104, 0, 376 )
-
-[node name="straight6" parent="GAPS" instance=ExtResource( 4 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 96, 0, 376 )
-
-[node name="straight7" parent="GAPS" instance=ExtResource( 4 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 88, 0, 376 )
-
-[node name="straight8" parent="GAPS" instance=ExtResource( 4 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 80, 0, 376 )
+[node name="straight16" parent="GAPS" instance=ExtResource( 4 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 128, 0, 480 )
 
 [node name="straight11" parent="GAPS" instance=ExtResource( 4 )]
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -152, 0, -288 )
 
-[node name="straight9" parent="GAPS" instance=ExtResource( 4 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 72, 0, 376 )
-
-[node name="straight10" parent="GAPS" instance=ExtResource( 4 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 64, 0, 376 )
-
 [node name="grass" parent="GAPS" instance=ExtResource( 3 )]
-transform = Transform( 20, 0, 0, 0, 1, 0, 0, 0, 20, 114, -0.001, 386 )
+transform = Transform( 20, 0, 0, 0, 1, 0, 0, 0, 20, 114, -0.001, 479 )
 tree_chance = 0.0
 
 [node name="grass2" parent="GAPS" instance=ExtResource( 3 )]
@@ -123,3 +112,6 @@ transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 368, 0, 3
 
 [node name="ForestA12" parent="." instance=ExtResource( 7 )]
 transform = Transform( -2.18557e-07, 0, 1, 0, 1, 0, -1, 0, -2.18557e-07, 368, 0, 212 )
+
+[node name="T-City" parent="." instance=ExtResource( 8 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 368, 0, 480 )

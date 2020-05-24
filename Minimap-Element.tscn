@@ -7,26 +7,30 @@
 size = Vector3( 16, 2, 16 )
 
 [sub_resource type="SpatialMaterial" id=6]
+resource_local_to_scene = true
 flags_unshaded = true
 flags_vertex_lighting = true
 
-[sub_resource type="CylinderMesh" id=2]
+[sub_resource type="CylinderMesh" id=3]
+resource_local_to_scene = true
 material = SubResource( 6 )
 top_radius = 50.0
 bottom_radius = 50.0
 height = 0.1
 
-[sub_resource type="SpatialMaterial" id=4]
+[sub_resource type="SpatialMaterial" id=7]
+resource_local_to_scene = true
 flags_transparent = true
 flags_unshaded = true
 flags_no_depth_test = true
-flags_do_not_receive_shadows = true
-flags_disable_ambient_light = true
+vertex_color_use_as_albedo = true
+vertex_color_is_srgb = true
 params_cull_mode = 2
+params_depth_draw_mode = 1
 albedo_texture = ExtResource( 2 )
 
 [sub_resource type="QuadMesh" id=5]
-material = SubResource( 4 )
+material = SubResource( 7 )
 
 [node name="Minimap-Element" type="Spatial"]
 visible = false
@@ -42,7 +46,7 @@ material/0 = null
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0 )
 visible = false
 layers = 2
-mesh = SubResource( 2 )
+mesh = SubResource( 3 )
 material/0 = null
 
 [node name="train" type="MeshInstance" parent="."]

@@ -141,4 +141,17 @@ func load_commuter():
 	for seeker in station_seekers:
 		if seeker.is_colliding():
 			var station_area = seeker.get_collider()
-			station_area.kill_commuter()
+			var stationID = station_area.StationID
+			var train = get_parent()
+			if train.commuters_inside[stationID] > 0:
+				train.commuters_inside[stationID] -= 1
+				train.money += 1
+			if train.have_free_space() and station_area.commuters.size() > 0:
+				station_area.kill_commuter()
+				var station_probs = [0,1] #[0,0,0,0,0,0,1,1,1,2,2,3,3,4,5]
+				while true:
+					var comdir = station_probs[randi() % station_probs.size()]
+					if comdir == stationID:
+						continue
+					train.commuters_inside[comdir] += 1
+					break

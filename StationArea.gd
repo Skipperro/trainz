@@ -31,6 +31,9 @@ func _ready():
 	$CollisionShape.shape.extents.z = area_Z
 	area_shape = $CollisionShape.shape.extents
 	reset_timer()
+	if StationID == 0:
+		for i in range(capacity/2):
+			_on_Timer_timeout()
 
 # Resets cooldown timer that creates new commuters
 func reset_timer(extended=0):
@@ -40,7 +43,7 @@ func reset_timer(extended=0):
 	
 # Removes one commuter (put him in the train)
 func kill_commuter():
-	reset_timer(20)
+	#reset_timer()
 	if commuters.size() > 0:
 		var ascendant = commuters.pop_front()
 		ascendant.queue_free()

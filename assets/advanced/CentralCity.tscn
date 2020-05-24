@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://assets/railroads/straight.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/railroads/curve.tscn" type="PackedScene" id=2]
@@ -28,6 +28,70 @@ albedo_color = Color( 0.792157, 0.792157, 0.752941, 1 )
 [sub_resource type="CubeMesh" id=2]
 material = SubResource( 1 )
 size = Vector3( 2, 2, 24 )
+
+[sub_resource type="GDScript" id=3]
+script/source = "extends Area
+
+# Max commuter capacity at the station
+export var capacity = 60
+# How fast new commuters are generated in seconds
+export var cooldown = 10.0
+# X of station area
+export var area_X = 8.0
+# Z of station area
+export var area_Z = 1.0
+# ID of this station
+export var StationID = 0
+# Preffered direction as a station ID where commuters want to go from here
+export var PrefferedDirection = 0
+# Station color
+export var StationColor = Color8(255, 0, 0)
+
+
+
+# Cooldown timer node
+onready var timer = $Timer
+# Station area
+var area_shape
+# List of commuters waiting for the train.
+var commuters = []
+# Commuter template
+var template = preload(\"res://assets/railroads/commuter.tscn\")
+
+func _ready():
+	$CollisionShape.shape.extents.x = area_X
+	$CollisionShape.shape.extents.z = area_Z
+	area_shape = $CollisionShape.shape.extents
+	reset_timer()
+	if StationID == 0:
+		for i in range(capacity/2):
+			_on_Timer_timeout()
+
+# Resets cooldown timer that creates new commuters
+func reset_timer(extended=0):
+	timer.stop()
+	timer.wait_time = cooldown + extended
+	timer.start()
+	
+# Removes one commuter (put him in the train)
+func kill_commuter():
+	#reset_timer()
+	if commuters.size() > 0:
+		var ascendant = commuters.pop_front()
+		ascendant.queue_free()
+
+
+func _on_Timer_timeout():
+	reset_timer()
+	if commuters.size() >= capacity:
+		return
+	var new_commuter = template.instance()
+	add_child(new_commuter)
+	new_commuter.translation.y = 0
+	new_commuter.translation.x = 0 - (area_shape.x) + (area_shape.x * randf() * 2)
+	new_commuter.translation.z = 0 - (area_shape.z) + (area_shape.z * randf() * 2)
+	commuters.append(new_commuter)
+"
 
 [node name="Central City" type="Spatial"]
 
@@ -2030,7 +2094,10 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -160, 0, 64 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -120, 0, -32 )
 
 [node name="FullTrain_v2" parent="." instance=ExtResource( 8 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, -8 )
+max_speed = 8.1
+acceleration = 0.1
+brakes = 0.1
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 transform = Transform( -0.512115, -0.00368246, -0.858909, -0.794142, -0.378941, 0.475124, -0.327225, 0.925414, 0.191137, 0, 15, 0 )
@@ -2042,7 +2109,9 @@ directional_shadow_depth_range = 1
 
 [node name="StationArea" parent="." instance=ExtResource( 18 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4, 1.6, -8 )
-cooldown = 1.0
+script = SubResource( 3 )
+capacity = 120
+cooldown = 5.0
 area_X = 10.0
 area_Z = 2.5
 

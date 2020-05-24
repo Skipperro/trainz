@@ -12,6 +12,7 @@ func _ready():
 		$train.visible = true
 	if type == "Station":
 		$station.visible = true
+		$station.mesh.surface_set_material(0, $station.mesh.surface_get_material(0).duplicate())
 		$station.mesh.surface_get_material(0).albedo_color = get_parent().StationColor
 		
 

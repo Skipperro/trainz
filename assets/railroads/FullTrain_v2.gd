@@ -2,6 +2,10 @@ extends Spatial
 
 # How long is the train.
 export(int, 1, 8) var wagons = 4
+# Capacity per wagon
+export(int, 10, 100) var wagon_capacity = 30
+# Substracted capacity due to driver seats
+export(int, 1, 50) var substracted_space = 20
 # Type of last wagon.
 export(String, "Driver", "Coach") var last_wagon = "Driver" 
 # Maximum speed.
@@ -10,6 +14,12 @@ export(float, 0.0, 20.0) var max_speed = 10.1
 export(float, 0.0, 0.5) var acceleration = 0.1
 # How fast it slows down.
 export(float, 0.0, 0.5) var brakes = 0.1
+# How many people for different stations are onboard.
+var commuters_inside = [0,0,0,0,0,0]
+# Collected money from tickets
+var money = 0
+# Is the door opened?
+var opened = false
 
 # Current percentage of power (from 0 to 1)
 var throttle = 0.01
@@ -48,6 +58,9 @@ var resolution_scale = 1.0
 	
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	cammount.translation = -translation
+	#$cammount/cammount/DynaRes/MainViewport/Camera.global_translate(Vector3(0,0,0))
+	update_commuters_count()
 	if OS.get_name() == "Android":
 		resolution_scale = 0.5
 	#shrink_resolution(2)
@@ -122,15 +135,50 @@ func switch_direction(dir):
 		ddd = dir
 
 func handle_station():
-	if speed > 0.0:
+	if speed > 0.0 or not opened:
 		return
 	for wagon in wagon_nodes:
 		if wagon.at_station() and randf() < 1.0/60.0:
 			wagon.load_commuter()
+	update_commuters_count()
+
+func have_free_space():
+	var sum = 0
+	for count in commuters_inside:
+		sum += count
+	if sum >= ((wagons * wagon_capacity) - substracted_space):
+		return false
+	return true
+		
+
+func update_commuters_count():
+	$Control/TLCorner/Com1/Label.text = str(commuters_inside[0])
+	$Control/TLCorner/Com2/Label.text = str(commuters_inside[1])
+	$Control/TLCorner/Com3/Label.text = str(commuters_inside[2])
+	$Control/TLCorner/Com4/Label.text = str(commuters_inside[3])
+	$Control/TLCorner/Com5/Label.text = str(commuters_inside[4])
+	$Control/TLCorner/Com6/Label.text = str(commuters_inside[5])
+	var sum = 0
+	var cap = (wagons * wagon_capacity) - substracted_space
+	for count in commuters_inside:
+		sum += count
+	$Control/TLCorner/Com7/Label.text = str(round((float(sum)/cap)*100.0)) + "%"
+	if sum == cap:
+		$Control/TLCorner/Com7/Label.set("custom_colors/font_color", Color8(255,0,0))
+	else:
+		$Control/TLCorner/Com7/Label.set("custom_colors/font_color", Color8(255,255,255))
+	$Control/TLCorner/Money/Label.text = str(money)
 
 # Called 60 times per second to drive the train.
 func _physics_process(delta):
 	$cammount/cammount/DynaRes/MainViewport.size = OS.window_size * resolution_scale
+	if speed == 0.0 and not opened:
+		$Control/Control/door.visible = true
+	else:
+		$Control/Control/door.visible = false
+	if speed > 0.0:
+		opened = false
+	
 	handle_station()
 	effect.wet -= delta
 	if effect.wet < 0.0:
@@ -221,3 +269,7 @@ func _on_direction_touch(event, dir):
 func _on_Viewport_timeout():
 	$cammount/cammount/DynaRes/MainViewport/Camera/MiniMapViewport.size = OS.window_size
 	$cammount/cammount/DynaRes/MainViewport/Camera/MiniMapViewport.render_target_update_mode = Viewport.UPDATE_ONCE
+
+
+func _on_door_pressed():
+	opened = true
