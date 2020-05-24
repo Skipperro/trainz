@@ -12,11 +12,12 @@ func _ready():
 	material_override = material_day
 	lights = $lights
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	if LightOn == false and LastLightState == true:
 		#lights.visible = false
 		material_override = material_day
+		LastLightState = LightOn
 	if LightOn == true and LastLightState == false:
 		#lights.visible = true
 		material_override = material_night
-	LastLightState = LightOn
+		LastLightState = LightOn

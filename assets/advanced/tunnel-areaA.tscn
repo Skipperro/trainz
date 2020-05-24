@@ -1,469 +1,553 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=12 format=2]
 
-[ext_resource path="res://assets/roads/road_straight_low.tscn" type="PackedScene" id=1]
-[ext_resource path="res://assets/suburbs/hill_corner_high.tscn" type="PackedScene" id=2]
-[ext_resource path="res://assets/railroads/tunnel.tscn" type="PackedScene" id=3]
-[ext_resource path="res://assets/railroads/tunnel_enterance.tscn" type="PackedScene" id=4]
-[ext_resource path="res://assets/roads/road_T_low.tscn" type="PackedScene" id=5]
-[ext_resource path="res://assets/suburbs/hill_corner_low.tscn" type="PackedScene" id=6]
-[ext_resource path="res://assets/suburbs/hill_ramp.tscn" type="PackedScene" id=7]
-[ext_resource path="res://assets/suburbs/house-hill-normal.tscn" type="PackedScene" id=8]
-[ext_resource path="res://assets/railroads/straight.tscn" type="PackedScene" id=9]
-[ext_resource path="res://assets/suburbs/office.tscn" type="PackedScene" id=10]
-[ext_resource path="res://assets/roads/road_hill.tscn" type="PackedScene" id=11]
-[ext_resource path="res://assets/suburbs/house-carport-smallA.tscn" type="PackedScene" id=12]
-[ext_resource path="res://assets/suburbs/house-country.tscn" type="PackedScene" id=13]
-[ext_resource path="res://assets/roads/road_straight_low_B.tscn" type="PackedScene" id=14]
-[ext_resource path="res://assets/suburbs/house-modern.tscn" type="PackedScene" id=15]
-[ext_resource path="res://assets/suburbs/house-mid.tscn" type="PackedScene" id=16]
-[ext_resource path="res://assets/suburbs/house-carport-garage.tscn" type="PackedScene" id=17]
-[ext_resource path="res://assets/suburbs/house-carport-right.tscn" type="PackedScene" id=18]
-[ext_resource path="res://assets/suburbs/grass.tscn" type="PackedScene" id=19]
-[ext_resource path="res://assets/roads/road_straight_low_A.tscn" type="PackedScene" id=20]
-[ext_resource path="res://assets/suburbs/house-hill-small.tscn" type="PackedScene" id=21]
+[ext_resource path="res://assets/suburbs/grass.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/env_sounds/forest.ogg" type="AudioStream" id=2]
+[ext_resource path="res://assets/suburbs/hill_corner_low.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/railroads/straight.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/suburbs/hill_ramp.tscn" type="PackedScene" id=5]
+[ext_resource path="res://assets/railroads/tunnel.tscn" type="PackedScene" id=6]
+[ext_resource path="res://assets/railroads/tunnel_enterance.tscn" type="PackedScene" id=7]
+[ext_resource path="res://assets/advanced/Echo-Area.gd" type="Script" id=8]
+[ext_resource path="res://assets/suburbs/hill_corner_high.tscn" type="PackedScene" id=9]
 
-[node name="Spatial" type="Spatial"]
+[sub_resource type="SphereShape" id=1]
+radius = 12.0
 
-[node name="hill_corner_low" parent="." instance=ExtResource( 6 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -41, 0, -8 )
+[sub_resource type="SphereShape" id=2]
+radius = 24.0
 
-[node name="hill_corner_low3" parent="." instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -41, 0, -48 )
+[node name="ForestA" type="Spatial"]
 
-[node name="hill_corner_low4" parent="." instance=ExtResource( 6 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 15, 0, -48 )
+[node name="grass12" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -44, 0, 48 )
 
-[node name="hill_corner_low6" parent="." instance=ExtResource( 6 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 31, 0, -32 )
+[node name="grass11" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -44, 0, 40 )
 
-[node name="hill_corner_low2" parent="." instance=ExtResource( 6 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -25, 0, 16 )
+[node name="grass18" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -36, 0, 48 )
 
-[node name="tunnel_enterance" parent="." instance=ExtResource( 4 )]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -25, 0, 0 )
+[node name="grass17" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -36, 0, 40 )
 
-[node name="tunnel_enterance7" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 23, 0, 0 )
+[node name="grass14" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -36, 2, 16 )
 
-[node name="hill_corner_high" parent="." instance=ExtResource( 2 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -25, 0, -8 )
+[node name="grass15" parent="." instance=ExtResource( 1 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 4, 2, 24 )
 
-[node name="hill_corner_high2" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 15, 0, -32 )
+[node name="grass36" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -28, 2, -8 )
 
-[node name="hill_corner_high5" parent="." instance=ExtResource( 2 )]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 23, 0, -8 )
+[node name="grass30" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -28, 0, 48 )
 
-[node name="hill_corner_high6" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 23, 0, 8 )
+[node name="grass29" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -28, 0, 40 )
 
-[node name="hill_corner_high4" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 31, 0, -24 )
+[node name="grass26" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -28, 2, 8 )
 
-[node name="tunnel_enterance2" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17, -0.1, 0 )
+[node name="grass37" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -28, 2, 0 )
 
-[node name="tunnel_enterance5" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7, -0.1, 0 )
+[node name="grass42" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, 48 )
 
-[node name="tunnel_enterance8" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -0.1, 0 )
+[node name="grass41" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, 40 )
 
-[node name="tunnel_enterance9" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9, -0.1, 0 )
+[node name="grass54" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, 48 )
 
-[node name="tunnel_enterance6" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15, -0.1, 0 )
+[node name="grass53" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, 40 )
 
-[node name="hill_ramp" parent="." instance=ExtResource( 7 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -33, 0, -8 )
+[node name="grass50" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 2, 16 )
 
-[node name="hill_ramp6" parent="." instance=ExtResource( 7 )]
-transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -33, 0, -48 )
+[node name="grass51" parent="." instance=ExtResource( 1 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -4, 2, 24 )
 
-[node name="hill_ramp7" parent="." instance=ExtResource( 7 )]
-transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -25, 0, -48 )
+[node name="grass66" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 48 )
 
-[node name="hill_ramp8" parent="." instance=ExtResource( 7 )]
-transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -9, 0, -48 )
+[node name="grass65" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 40 )
 
-[node name="hill_ramp9" parent="." instance=ExtResource( 7 )]
-transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -1, 0, -48 )
+[node name="grass62" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 2, 16 )
 
-[node name="hill_ramp10" parent="." instance=ExtResource( 7 )]
-transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 7, 0, -48 )
+[node name="grass63" parent="." instance=ExtResource( 1 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -12, 2, 24 )
 
-[node name="hill_ramp17" parent="." instance=ExtResource( 7 )]
-transform = Transform( -2.18557e-07, 0, 1, 0, 1, 0, -1, 0, -2.18557e-07, 7, 0, 16 )
+[node name="grass74" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 2, 16 )
 
-[node name="hill_ramp15" parent="." instance=ExtResource( 7 )]
-transform = Transform( -2.18557e-07, 0, 1, 0, 1, 0, -1, 0, -2.18557e-07, -9, 0, 16 )
+[node name="grass75" parent="." instance=ExtResource( 1 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -36, 2, 24 )
 
-[node name="hill_ramp11" parent="." instance=ExtResource( 7 )]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 15, 0, -40 )
+[node name="grass96" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 2, -8 )
 
-[node name="hill_ramp22" parent="." instance=ExtResource( 7 )]
-transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 23, 0, -32 )
+[node name="grass120" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 2, 0 )
 
-[node name="hill_ramp12" parent="." instance=ExtResource( 7 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 39, 0, -8 )
+[node name="grass90" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 2, 48 )
 
-[node name="hill_ramp14" parent="." instance=ExtResource( 7 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 31, 0, -8 )
+[node name="grass89" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 2, 40 )
 
-[node name="hill_ramp21" parent="." instance=ExtResource( 7 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 39, 0, 16 )
+[node name="grass88" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 2, 32 )
 
-[node name="hill_ramp20" parent="." instance=ExtResource( 7 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 31, 0, 16 )
+[node name="grass87" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 2, 24 )
 
-[node name="hill_ramp19" parent="." instance=ExtResource( 7 )]
-transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 31, 0, 8 )
+[node name="grass86" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 2, 16 )
 
-[node name="hill_ramp18" parent="." instance=ExtResource( 7 )]
-transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 39, 0, 8 )
+[node name="grass85" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 2, 8 )
 
-[node name="hill_ramp13" parent="." instance=ExtResource( 7 )]
-transform = Transform( 1.19209e-07, 0, -1, 0, 1, 0, 1, 0, 1.19209e-07, 39, 0, -24 )
+[node name="grass108" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 2, -8 )
 
-[node name="hill_ramp2" parent="." instance=ExtResource( 7 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -41, 0, -16 )
+[node name="grass115" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 28, 2, -8 )
 
-[node name="hill_ramp3" parent="." instance=ExtResource( 7 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -41, 0, -24 )
+[node name="grass116" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 36, 2, -8 )
 
-[node name="hill_ramp4" parent="." instance=ExtResource( 7 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -41, 0, -32 )
+[node name="grass119" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 2, 0 )
 
-[node name="hill_ramp5" parent="." instance=ExtResource( 7 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -41, 0, -40 )
+[node name="grass118" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 28, 2, 0 )
 
-[node name="straight" parent="." instance=ExtResource( 9 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -33, 0, 0 )
+[node name="grass117" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 36, 2, 0 )
 
-[node name="straight2" parent="." instance=ExtResource( 9 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -41, 0, 0 )
+[node name="grass102" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 2, 48 )
 
-[node name="straight4" parent="." instance=ExtResource( 9 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 39, 0, 0 )
+[node name="grass101" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 2, 40 )
 
-[node name="straight3" parent="." instance=ExtResource( 9 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 31, 0, 0 )
+[node name="grass100" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 2, 32 )
 
-[node name="house-hill-normal" parent="." instance=ExtResource( 8 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -25, 0, 8 )
+[node name="grass114" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 28, 2, 48 )
 
-[node name="road_straight_low_A" parent="." instance=ExtResource( 20 )]
-transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -17, 2, 0 )
+[node name="grass113" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 28, 2, 40 )
 
-[node name="house-mid" parent="road_straight_low_A" instance=ExtResource( 16 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.04907e-06, 0, -8 )
+[node name="grass112" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 28, 2, 32 )
 
-[node name="road_straight_low_A2" parent="." instance=ExtResource( 20 )]
-transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -17, 2, 8 )
+[node name="grass121" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 36, 2, 8 )
 
-[node name="house-carport-garage" parent="road_straight_low_A2" instance=ExtResource( 17 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.43051e-06, 0, -8 )
+[node name="grass138" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 44, 0, 48 )
 
-[node name="road_straight_low_A3" parent="." instance=ExtResource( 20 )]
-transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -17, 2, -8 )
+[node name="grass137" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 44, 0, 40 )
 
-[node name="house-modern" parent="road_straight_low_A3" instance=ExtResource( 15 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.53674e-07, -1, -8 )
+[node name="grass136" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 44, 0, 32 )
 
-[node name="road_hill" parent="." instance=ExtResource( 11 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -17, 0, 16 )
+[node name="grass135" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 44, 0, 24 )
 
-[node name="road_hill2" parent="." instance=ExtResource( 11 )]
-transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -17, 0, -48 )
+[node name="tunnel_enterance" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -36, 0, 0 )
 
-[node name="road_T_low" parent="." instance=ExtResource( 5 )]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -17, 0, 24 )
+[node name="straight" parent="tunnel_enterance" instance=ExtResource( 4 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8, 0, 6.99382e-07 )
 
-[node name="road_T_low2" parent="." instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 7, 0, 24 )
+[node name="straight2" parent="tunnel_enterance" instance=ExtResource( 4 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -24, 0, -2.09815e-06 )
 
-[node name="road_T_low4" parent="." instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 31, 0, 24 )
+[node name="straight3" parent="tunnel_enterance" instance=ExtResource( 4 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -32, 0, -2.79753e-06 )
 
-[node name="road_T_low3" parent="." instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, -33, 0, 24 )
+[node name="tunnel_enterance2" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, -20, 0, 0 )
 
-[node name="road_straight_low" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, 24 )
+[node name="tunnel_enterance3" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 44, 0, 0 )
 
-[node name="road_straight_low2" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 0, 24 )
+[node name="tunnel_enterance4" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1, 0, -2.62268e-07, 0, 1, 0, 2.62268e-07, 0, -1, 4, 0, 0 )
 
-[node name="road_straight_low4" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -41, 0, 24 )
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 2, 4 )
+stream = ExtResource( 2 )
+unit_size = 40.0
+autoplay = true
+max_distance = 100.0
+out_of_range_mode = 1
+bus = "Ambience"
 
-[node name="road_straight_low7" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, 24 )
+[node name="AudioStreamPlayer3D2" type="AudioStreamPlayer3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 2, -4 )
+stream = ExtResource( 2 )
+unit_size = 40.0
+autoplay = true
+max_distance = 100.0
+out_of_range_mode = 1
+bus = "Ambience"
 
-[node name="road_straight_low_B6" parent="." instance=ExtResource( 14 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 7, 0, 32 )
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 0.866025, 0.12941, -0.482963, 0, 0.965926, 0.258819, 0.5, -0.224144, 0.836516, 0, 11.7145, 0 )
+visible = false
+shadow_enabled = true
+editor_only = true
+directional_shadow_mode = 0
+directional_shadow_normal_bias = 0.0
+directional_shadow_bias_split_scale = 0.33
+directional_shadow_depth_range = 1
+directional_shadow_max_distance = 41.8
 
-[node name="house-country" parent="road_straight_low_B6" instance=ExtResource( 13 )]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, -1, 8 )
+[node name="tunnel_enterance5" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12, -0.1, 0 )
 
-[node name="house-country4" parent="road_straight_low_B6" instance=ExtResource( 13 )]
-transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 7.62939e-06, -1, -32 )
+[node name="tunnel_enterance9" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -28, -0.1, 0 )
 
-[node name="house-country2" parent="road_straight_low_B6" instance=ExtResource( 13 )]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -3.8147e-06, -1, -16 )
+[node name="tunnel_enterance6" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20, -0.1, 0 )
 
-[node name="house-country3" parent="road_straight_low_B6" instance=ExtResource( 13 )]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 8, -1, -16 )
+[node name="tunnel_enterance7" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 28, -0.1, 0 )
 
-[node name="house-modern" parent="road_straight_low_B6" instance=ExtResource( 15 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, -8 )
+[node name="tunnel_enterance8" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 36, -0.1, 0 )
 
-[node name="house-modern2" parent="road_straight_low_B6" instance=ExtResource( 15 )]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 16, -1, -16 )
+[node name="hill_corner_low" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -44, 0, 8 )
 
-[node name="road_straight_low_B5" parent="." instance=ExtResource( 14 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 7, 0, 40 )
+[node name="hill_corner_low21" parent="." instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -44, 0, 32 )
 
-[node name="house-carport-garage" parent="road_straight_low_B5" instance=ExtResource( 17 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8 )
+[node name="hill_corner_low4" parent="." instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -44, 0, -8 )
 
-[node name="house-mid" parent="road_straight_low_B5" instance=ExtResource( 16 )]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 8 )
+[node name="hill_corner_low6" parent="." instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -36, 2, -16 )
 
-[node name="house-mid2" parent="road_straight_low_B5" instance=ExtResource( 16 )]
-transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 3.8147e-06, 0, -32 )
+[node name="hill_corner_low9" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -36, 2, -40 )
 
-[node name="road_straight_low_B4" parent="." instance=ExtResource( 14 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 7, 0, 48 )
+[node name="hill_corner_low5" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -44, 0, -48 )
 
-[node name="house-carport-right" parent="road_straight_low_B4" instance=ExtResource( 18 )]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 8 )
+[node name="hill_corner_low7" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -28, 4, -32 )
 
-[node name="house-carport-right2" parent="road_straight_low_B4" instance=ExtResource( 18 )]
-transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 3.8147e-06, 0, -32 )
+[node name="hill_corner_low8" parent="." instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -28, 4, -24 )
 
-[node name="house-carport-smallA" parent="road_straight_low_B4" instance=ExtResource( 12 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8 )
+[node name="hill_corner_low15" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 44, 0, -48 )
 
-[node name="road_straight_low_B12" parent="." instance=ExtResource( 14 )]
-transform = Transform( -5.96046e-08, 0, 1, 0, 1, 0, -1, 0, -5.96046e-08, -33, 0, 48 )
+[node name="hill_corner_low14" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 36, 2, -40 )
 
-[node name="house-country" parent="road_straight_low_B12" instance=ExtResource( 13 )]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, -1, 8 )
+[node name="hill_corner_low13" parent="." instance=ExtResource( 3 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 36, 2, -16 )
 
-[node name="house-modern" parent="road_straight_low_B12" instance=ExtResource( 15 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, -8 )
+[node name="hill_corner_low22" parent="." instance=ExtResource( 3 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 44, 0, 16 )
 
-[node name="house-modern2" parent="road_straight_low_B12" instance=ExtResource( 15 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16, -1, -8 )
+[node name="hill_corner_low11" parent="." instance=ExtResource( 3 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 28, 4, -24 )
 
-[node name="road_straight_low_B11" parent="." instance=ExtResource( 14 )]
-transform = Transform( -5.96046e-08, 0, 1, 0, 1, 0, -1, 0, -5.96046e-08, -33, 0, 40 )
+[node name="hill_corner_low10" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 28, 4, -32 )
 
-[node name="house-carport-garage" parent="road_straight_low_B11" instance=ExtResource( 17 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8 )
+[node name="hill_corner_low2" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -28, 2, 16 )
 
-[node name="house-mid" parent="road_straight_low_B11" instance=ExtResource( 16 )]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 8 )
+[node name="hill_corner_low3" parent="." instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -20, 2, 16 )
 
-[node name="road_straight_low_B10" parent="." instance=ExtResource( 14 )]
-transform = Transform( -5.96046e-08, 0, 1, 0, 1, 0, -1, 0, -5.96046e-08, -33, 0, 32 )
+[node name="hill_corner_low20" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 2, 8 )
 
-[node name="house-carport-right" parent="road_straight_low_B10" instance=ExtResource( 18 )]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 8 )
+[node name="hill_corner_low19" parent="." instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 28, 2, 8 )
 
-[node name="road_straight_low_B15" parent="." instance=ExtResource( 14 )]
-transform = Transform( 1.47027e-07, 0, -1, 0, 1, 0, 1, 0, 1.47027e-07, -17, 2, -32 )
+[node name="hill_corner_low16" parent="." instance=ExtResource( 3 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -20, 2, 24 )
 
-[node name="house-country" parent="road_straight_low_B15" instance=ExtResource( 13 )]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, -1, 8 )
+[node name="hill_corner_low12" parent="." instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -28, 2, 24 )
 
-[node name="house-modern" parent="road_straight_low_B15" instance=ExtResource( 15 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, -8 )
+[node name="hill_corner_low18" parent="." instance=ExtResource( 3 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 28, 2, 24 )
 
-[node name="house-modern2" parent="road_straight_low_B15" instance=ExtResource( 15 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16, -1, -8 )
+[node name="hill_corner_low17" parent="." instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 20, 2, 24 )
 
-[node name="road_straight_low_B14" parent="." instance=ExtResource( 14 )]
-transform = Transform( 1.47027e-07, 0, -1, 0, 1, 0, 1, 0, 1.47027e-07, -17, 2, -24 )
+[node name="hill_ramp" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -44, 0, 16 )
 
-[node name="house-carport-garage" parent="road_straight_low_B14" instance=ExtResource( 17 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8 )
+[node name="hill_ramp56" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -44, 0, 24 )
 
-[node name="house-mid" parent="road_straight_low_B14" instance=ExtResource( 16 )]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 8 )
+[node name="hill_ramp59" parent="." instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -36, 0, 32 )
 
-[node name="road_straight_low_B16" parent="." instance=ExtResource( 14 )]
-transform = Transform( -2.3445e-07, 0, 1, 0, 1, 0, -1, 0, -2.3445e-07, -17, 2, -40 )
+[node name="hill_ramp60" parent="." instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -28, 0, 32 )
 
-[node name="house-carport-garage" parent="road_straight_low_B16" instance=ExtResource( 17 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8 )
+[node name="hill_ramp61" parent="." instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -20, 0, 32 )
 
-[node name="house-mid" parent="road_straight_low_B16" instance=ExtResource( 16 )]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 8 )
+[node name="hill_ramp62" parent="." instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -12, 0, 32 )
 
-[node name="road_straight_low_B13" parent="." instance=ExtResource( 14 )]
-transform = Transform( 1.47027e-07, 0, -1, 0, 1, 0, 1, 0, 1.47027e-07, -17, 2, -16 )
+[node name="hill_ramp63" parent="." instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4, 0, 32 )
 
-[node name="house-carport-right" parent="road_straight_low_B13" instance=ExtResource( 18 )]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 8 )
+[node name="hill_ramp64" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 40 )
 
-[node name="road_straight_low_B9" parent="." instance=ExtResource( 14 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 31, 0, 32 )
+[node name="hill_ramp65" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 48 )
 
-[node name="road_straight_low_B8" parent="." instance=ExtResource( 14 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 31, 0, 40 )
+[node name="hill_ramp26" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -44, 0, -16 )
 
-[node name="road_straight_low_B7" parent="." instance=ExtResource( 14 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 31, 0, 48 )
+[node name="hill_ramp27" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -44, 0, -24 )
 
-[node name="road_straight_low5" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 24 )
+[node name="hill_ramp28" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -44, 0, -32 )
 
-[node name="house-hill-small" parent="road_straight_low5" instance=ExtResource( 21 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8 )
+[node name="hill_ramp35" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -36, 2, -24 )
 
-[node name="house-hill-small2" parent="road_straight_low5" instance=ExtResource( 21 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, -8 )
+[node name="hill_ramp34" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -36, 2, -32 )
 
-[node name="house-hill-normal" parent="road_straight_low5/house-hill-small2" instance=ExtResource( 8 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 0 )
+[node name="hill_ramp29" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -44, 0, -40 )
 
-[node name="road_straight_low10" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 39, 0, 24 )
+[node name="hill_ramp45" parent="." instance=ExtResource( 5 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 44, 0, -40 )
 
-[node name="road_straight_low8" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 23, 0, 24 )
+[node name="hill_ramp44" parent="." instance=ExtResource( 5 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 44, 0, -32 )
 
-[node name="office" parent="." instance=ExtResource( 10 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -33, 0, 16 )
+[node name="hill_ramp43" parent="." instance=ExtResource( 5 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 44, 0, -24 )
 
-[node name="office2" parent="." instance=ExtResource( 10 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -41, 0, 16 )
+[node name="hill_ramp42" parent="." instance=ExtResource( 5 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 36, 2, -32 )
 
-[node name="grass" parent="." instance=ExtResource( 19 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -33, 0, 8 )
+[node name="hill_ramp41" parent="." instance=ExtResource( 5 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 36, 2, -24 )
 
-[node name="grass9" parent="." instance=ExtResource( 19 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -33, 2, -16 )
+[node name="hill_ramp40" parent="." instance=ExtResource( 5 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 44, 0, -16 )
 
-[node name="grass10" parent="." instance=ExtResource( 19 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -33, 2, -24 )
+[node name="hill_ramp46" parent="." instance=ExtResource( 5 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 44, 0, -8 )
 
-[node name="grass11" parent="." instance=ExtResource( 19 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -33, 2, -32 )
+[node name="hill_ramp55" parent="." instance=ExtResource( 5 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 44, 0, 8 )
 
-[node name="grass12" parent="." instance=ExtResource( 19 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -33, 2, -40 )
+[node name="hill_ramp66" parent="." instance=ExtResource( 5 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 36, 0, 24 )
 
-[node name="grass2" parent="." instance=ExtResource( 19 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -41, 0, 8 )
+[node name="hill_ramp67" parent="." instance=ExtResource( 5 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 36, 0, 32 )
 
-[node name="grass3" parent="." instance=ExtResource( 19 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, 32 )
+[node name="hill_ramp68" parent="." instance=ExtResource( 5 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 36, 0, 40 )
 
-[node name="grass4" parent="." instance=ExtResource( 19 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 0, 32 )
+[node name="hill_ramp69" parent="." instance=ExtResource( 5 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 36, 0, 48 )
 
-[node name="grass5" parent="." instance=ExtResource( 19 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 0, 40 )
+[node name="hill_ramp57" parent="." instance=ExtResource( 5 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 28, 2, 16 )
 
-[node name="grass6" parent="." instance=ExtResource( 19 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, 40 )
+[node name="hill_ramp58" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 20, 2, 16 )
 
-[node name="grass7" parent="." instance=ExtResource( 19 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, 48 )
+[node name="hill_ramp2" parent="." instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -12, 0, 8 )
 
-[node name="grass8" parent="." instance=ExtResource( 19 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 0, 48 )
+[node name="hill_ramp3" parent="." instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -4, 0, 8 )
 
-[node name="grass40" parent="." instance=ExtResource( 19 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 23, 0, -48 )
+[node name="hill_ramp5" parent="." instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4, 0, -8 )
 
-[node name="grass39" parent="." instance=ExtResource( 19 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 23, 0, -40 )
+[node name="hill_ramp4" parent="." instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -12, 0, -8 )
 
-[node name="grass38" parent="." instance=ExtResource( 19 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 31, 0, -40 )
+[node name="hill_ramp6" parent="." instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -12, 2, -16 )
 
-[node name="grass37" parent="." instance=ExtResource( 19 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 31, 0, -48 )
+[node name="hill_ramp7" parent="." instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4, 2, -16 )
 
-[node name="grass36" parent="." instance=ExtResource( 19 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 39, 0, -48 )
+[node name="hill_ramp8" parent="." instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4, 2, -16 )
 
-[node name="grass35" parent="." instance=ExtResource( 19 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 39, 0, -40 )
+[node name="hill_ramp49" parent="." instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 12, 2, -16 )
 
-[node name="grass41" parent="." instance=ExtResource( 19 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 39, 0, -32 )
+[node name="hill_ramp54" parent="." instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 20, 2, -16 )
 
-[node name="grass18" parent="." instance=ExtResource( 19 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 2, -8 )
+[node name="hill_ramp9" parent="." instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -20, 2, -16 )
 
-[node name="grass29" parent="." instance=ExtResource( 19 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 2, -8 )
+[node name="hill_ramp33" parent="." instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -28, 2, -16 )
 
-[node name="grass17" parent="." instance=ExtResource( 19 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 2, -8 )
+[node name="hill_ramp39" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 28, 2, -40 )
 
-[node name="grass16" parent="." instance=ExtResource( 19 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 2, 0 )
+[node name="hill_ramp13" parent="." instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -12, 4, -24 )
 
-[node name="grass15" parent="." instance=ExtResource( 19 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 2, 0 )
+[node name="hill_ramp12" parent="." instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4, 4, -24 )
 
-[node name="grass42" parent="." instance=ExtResource( 19 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 2, 0 )
+[node name="hill_ramp11" parent="." instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4, 4, -24 )
 
-[node name="grass14" parent="." instance=ExtResource( 19 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 2, 8 )
+[node name="hill_ramp48" parent="." instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 12, 4, -24 )
 
-[node name="grass30" parent="." instance=ExtResource( 19 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 2, 8 )
+[node name="hill_ramp53" parent="." instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 20, 4, -24 )
 
-[node name="grass13" parent="." instance=ExtResource( 19 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 2, 8 )
+[node name="hill_ramp10" parent="." instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -20, 4, -24 )
 
-[node name="grass24" parent="." instance=ExtResource( 19 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 2, -32 )
+[node name="hill_ramp17" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -4, 4, -32 )
 
-[node name="grass23" parent="." instance=ExtResource( 19 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 2, -32 )
+[node name="hill_ramp16" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -12, 4, -32 )
 
-[node name="grass26" parent="." instance=ExtResource( 19 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 2, -40 )
+[node name="hill_ramp15" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -20, 4, -32 )
 
-[node name="grass25" parent="." instance=ExtResource( 19 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 2, -40 )
+[node name="hill_ramp14" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 4, 4, -32 )
 
-[node name="grass22" parent="." instance=ExtResource( 19 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 2, -24 )
+[node name="hill_ramp47" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 12, 4, -32 )
 
-[node name="grass21" parent="." instance=ExtResource( 19 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 2, -24 )
+[node name="hill_ramp52" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 20, 4, -32 )
 
-[node name="grass20" parent="." instance=ExtResource( 19 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 2, -16 )
+[node name="hill_ramp21" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -4, 2, -40 )
 
-[node name="grass28" parent="." instance=ExtResource( 19 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 2, -24 )
+[node name="hill_ramp20" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -12, 2, -40 )
 
-[node name="grass27" parent="." instance=ExtResource( 19 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 2, -16 )
+[node name="hill_ramp19" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -20, 2, -40 )
 
-[node name="grass32" parent="." instance=ExtResource( 19 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 23, 2, -24 )
+[node name="hill_ramp18" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 4, 2, -40 )
 
-[node name="grass31" parent="." instance=ExtResource( 19 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 23, 2, -16 )
+[node name="hill_ramp38" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 12, 2, -40 )
 
-[node name="grass33" parent="." instance=ExtResource( 19 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 31, 2, -16 )
+[node name="hill_ramp51" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 20, 2, -40 )
 
-[node name="grass34" parent="." instance=ExtResource( 19 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 39, 2, -16 )
+[node name="hill_ramp25" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -4, 0, -48 )
 
-[node name="grass19" parent="." instance=ExtResource( 19 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 2, -16 )
+[node name="hill_ramp24" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -12, 0, -48 )
+
+[node name="hill_ramp23" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -20, 0, -48 )
+
+[node name="hill_ramp30" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -28, 0, -48 )
+
+[node name="hill_ramp32" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -28, 2, -40 )
+
+[node name="hill_ramp31" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -36, 0, -48 )
+
+[node name="hill_ramp37" parent="." instance=ExtResource( 5 )]
+transform = Transform( -2.18557e-07, 0, 1, 0, 1, 0, -1, 0, -2.18557e-07, 28, 2, -16 )
+
+[node name="hill_ramp22" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 4, 0, -48 )
+
+[node name="hill_ramp36" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 12, 0, -48 )
+
+[node name="hill_ramp50" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 20, 0, -48 )
+
+[node name="hill_corner_high" parent="." instance=ExtResource( 9 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -36, 0, -8 )
+
+[node name="hill_corner_high7" parent="." instance=ExtResource( 9 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 36, 0, -48 )
+
+[node name="hill_corner_high10" parent="." instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 28, 0, -48 )
+
+[node name="hill_corner_high6" parent="." instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -36, 0, 8 )
+
+[node name="hill_corner_high8" parent="." instance=ExtResource( 9 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4, 0, 32 )
+
+[node name="hill_corner_high2" parent="." instance=ExtResource( 9 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -20, 0, 8 )
+
+[node name="hill_corner_high3" parent="." instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 8 )
+
+[node name="hill_corner_high9" parent="." instance=ExtResource( 9 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 36, 0, 16 )
+
+[node name="hill_corner_high5" parent="." instance=ExtResource( 9 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4, 0, -8 )
+
+[node name="hill_corner_high4" parent="." instance=ExtResource( 9 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -20, 0, -8 )
+
+[node name="Area" type="Area" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -28, 0, 0 )
+collision_layer = 524800
+collision_mask = 524800
+script = ExtResource( 8 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Area"]
+shape = SubResource( 1 )
+
+[node name="Area2" type="Area" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, 0 )
+collision_layer = 524800
+collision_mask = 524800
+script = ExtResource( 8 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Area2"]
+shape = SubResource( 2 )
+[connection signal="body_entered" from="Area" to="Area" method="_on_Area_body_entered"]
+[connection signal="body_exited" from="Area" to="Area" method="_on_Area_body_exited"]
+[connection signal="body_entered" from="Area2" to="Area2" method="_on_Area_body_entered"]
+[connection signal="body_exited" from="Area2" to="Area2" method="_on_Area_body_exited"]

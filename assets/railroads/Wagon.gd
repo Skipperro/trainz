@@ -11,28 +11,27 @@ signal direction_chosen(dir)
 # List of directions that head took, so that other wagons can follow same path.
 var path_queue = []
 # Node for path.
-var n_path
+onready var n_path = $Path
 # Node for wagon KinematicBody.
-var n_wagon
+onready var n_wagon = $KinematicBody
 # Node for PathFollower used to guide the wagon.
-var n_follower
+onready var n_follower = $Path/PathFollow
 # Node for RayCast used to detect distance to wagon ahead.
-var ray
+onready var ray = $KinematicBody/RayCast
+# Nodes for RayCast used to seek station
+onready var station_seekers = [$KinematicBody/StationSeeker_right, $KinematicBody/StationSeeker_left]
 # If this is the first wagon with driver inside.
 var head = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	n_path = $Path
-	n_wagon = $KinematicBody
-	n_follower = $Path/PathFollow
-	ray = $KinematicBody/RayCast
 	n_path.curve = Curve3D.new()	# Make sure it's unique for each wagon.
 	set_type(type)
 
 # Rotates wagon mesh 180 degree. Useful for last wagon if it's driver type.
 func invert_wagon():
 	$KinematicBody/driver_wagon.rotation_degrees.y += 180
+	
 
 # Set visible mesh of the wagon.
 func set_type(newtype):
@@ -75,6 +74,9 @@ func move_forward(distance):
 func plot_course(direction):
 	if head:
 		emit_signal("direction_chosen", direction)
+		$KinematicBody/Listener.make_current()
+	else:
+		$KinematicBody/Listener.clear_current()
 	
 	# Smooth out some imperfection created by PathFollow.
 	n_wagon.translation.x = round(n_wagon.translation.x)
@@ -126,3 +128,17 @@ func plot_course(direction):
 func spot_new_tile(straight, left, right):
 	if head:
 		emit_signal("spot_new_tile", straight, left, right)
+
+# Checks if the wagon is at the station.
+func at_station():
+	for seeker in station_seekers:
+		if seeker.is_colliding():
+			return true
+	return false
+
+# Takes commuter from the station
+func load_commuter():
+	for seeker in station_seekers:
+		if seeker.is_colliding():
+			var station_area = seeker.get_collider()
+			station_area.kill_commuter()

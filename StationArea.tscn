@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/env_sounds/station.ogg" type="AudioStream" id=1]
+[ext_resource path="res://StationArea.gd" type="Script" id=2]
+[ext_resource path="res://Minimap-Element.tscn" type="PackedScene" id=3]
+
+[sub_resource type="BoxShape" id=1]
+resource_local_to_scene = true
+extents = Vector3( 8, 3, 1 )
+
+[node name="StationArea" type="Area"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0 )
+collision_layer = 4
+collision_mask = 4
+script = ExtResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 1 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 100.0
+one_shot = true
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource( 1 )
+unit_size = 10.0
+autoplay = true
+max_distance = 30.0
+out_of_range_mode = 1
+bus = "Ambience"
+doppler_tracking = 1
+
+[node name="Minimap-Element" parent="." instance=ExtResource( 3 )]
+type = "Station"
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

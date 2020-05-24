@@ -1,0 +1,15 @@
+[gd_resource type="Environment" load_steps=2 format=2]
+
+[sub_resource type="ProceduralSky" id=1]
+sun_curve = 0.0466517
+
+[resource]
+background_sky = SubResource( 1 )
+background_color = Color( 1, 1, 1, 1 )
+fog_color = Color( 0.101961, 0.101961, 0.101961, 1 )
+fog_depth_end = 57.0
+tonemap_mode = 3
+adjustment_enabled = true
+adjustment_brightness = 0.68
+adjustment_contrast = 1.08
+adjustment_saturation = 1.4

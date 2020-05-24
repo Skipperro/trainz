@@ -1,0 +1,63 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://rpg-screen.png" type="Texture" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+
+[sub_resource type="ViewportTexture" id=1]
+viewport_path = NodePath("Viewport")
+
+[node name="ViewportTest" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Viewport" type="Viewport" parent="."]
+size = Vector2( 800, 600 )
+own_world = true
+transparent_bg = true
+disable_3d = true
+usage = 0
+render_target_v_flip = true
+
+[node name="TextureRect" type="TextureRect" parent="Viewport"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 1 )
+expand = true
+stretch_mode = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = SubResource( 1 )
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="Control" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -64.0
+margin_top = -63.9999
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -64.0
+margin_top = -64.0
+texture = ExtResource( 2 )
+stretch_mode = 3

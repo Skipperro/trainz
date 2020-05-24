@@ -16,5 +16,3 @@ func _ready():
 	var house = houses[randi()%houses.size()].instance()
 	add_child(house)
 	$placeholder.queue_free()
-
-

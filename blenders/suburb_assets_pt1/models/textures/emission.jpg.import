@@ -4,15 +4,16 @@ importer="texture"
 type="StreamTexture"
 path.s3tc="res://.import/emission.jpg-4697c87fc9e4c21e73ab219435490461.s3tc.stex"
 path.etc2="res://.import/emission.jpg-4697c87fc9e4c21e73ab219435490461.etc2.stex"
+path.etc="res://.import/emission.jpg-4697c87fc9e4c21e73ab219435490461.etc.stex"
 metadata={
-"imported_formats": [ "s3tc", "etc2" ],
+"imported_formats": [ "s3tc", "etc2", "etc" ],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://blenders/suburb_assets_pt1/models/textures/emission.jpg"
-dest_files=[ "res://.import/emission.jpg-4697c87fc9e4c21e73ab219435490461.s3tc.stex", "res://.import/emission.jpg-4697c87fc9e4c21e73ab219435490461.etc2.stex" ]
+dest_files=[ "res://.import/emission.jpg-4697c87fc9e4c21e73ab219435490461.s3tc.stex", "res://.import/emission.jpg-4697c87fc9e4c21e73ab219435490461.etc2.stex", "res://.import/emission.jpg-4697c87fc9e4c21e73ab219435490461.etc.stex" ]
 
 [params]
 

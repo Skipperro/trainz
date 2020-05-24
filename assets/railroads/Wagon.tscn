@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://blenders/rail_basic_v1/concrete.material" type="Material" id=1]
 [ext_resource path="res://blenders/rail_basic_v1/dark_grey.material" type="Material" id=2]
@@ -207,54 +207,40 @@ albedo_color = Color( 0.192157, 0.184314, 0.184314, 1 )
 metallic = 0.53
 
 [sub_resource type="RayShape" id=5]
-length = 2.0
 
-[sub_resource type="CubeMesh" id=6]
-size = Vector3( 0.001, 0.001, 0.001 )
+[sub_resource type="BoxShape" id=6]
 
-[sub_resource type="SpatialMaterial" id=7]
-emission_enabled = true
-emission = Color( 1, 1, 1, 1 )
-emission_energy = 1.0
-emission_operator = 0
-emission_on_uv2 = false
-
-[sub_resource type="BoxShape" id=8]
-
-[sub_resource type="Curve3D" id=9]
+[sub_resource type="Curve3D" id=7]
 resource_local_to_scene = true
 _data = {
 "points": PoolVector3Array(  ),
 "tilts": PoolRealArray(  )
 }
 
-[sub_resource type="SpatialMaterial" id=10]
+[sub_resource type="SpatialMaterial" id=8]
 flags_unshaded = true
 albedo_color = Color( 0, 0, 1, 1 )
 
-[sub_resource type="CubeMesh" id=11]
-material = SubResource( 10 )
+[sub_resource type="CubeMesh" id=9]
+material = SubResource( 8 )
 size = Vector3( 0.2, 4, 0.2 )
 
-[sub_resource type="SpatialMaterial" id=12]
+[sub_resource type="SpatialMaterial" id=10]
 flags_unshaded = true
 albedo_color = Color( 1, 0, 0, 1 )
 
-[sub_resource type="SphereMesh" id=13]
-material = SubResource( 12 )
+[sub_resource type="SphereMesh" id=11]
+material = SubResource( 10 )
 radius = 0.3
 height = 3.0
 
-[sub_resource type="CylinderMesh" id=14]
+[sub_resource type="CylinderMesh" id=12]
 top_radius = 0.01
 bottom_radius = 0.2
 
-[sub_resource type="SpatialMaterial" id=15]
+[sub_resource type="SpatialMaterial" id=13]
 flags_unshaded = true
 albedo_color = Color( 1, 1, 0, 1 )
-
-[sub_resource type="PlaneMesh" id=16]
-size = Vector2( 200, 200 )
 
 [node name="Wagon" type="Spatial"]
 script = ExtResource( 10 )
@@ -262,12 +248,15 @@ script = ExtResource( 10 )
 [node name="KinematicBody" type="KinematicBody" parent="."]
 collision/safe_margin = 0.1
 
+[node name="Listener" type="Listener" parent="KinematicBody"]
+current = true
+
 [node name="Smoothing" type="Spatial" parent="KinematicBody"]
 script = ExtResource( 4 )
 
 [node name="driver_wagon" type="MeshInstance" parent="KinematicBody"]
 transform = Transform( 100, 0, 0, 0, 5.96046e-06, 100, 0, -100, 5.96046e-06, 0, 0, 0 )
-visible = false
+cast_shadow = 2
 mesh = SubResource( 1 )
 material/0 = null
 material/1 = null
@@ -280,6 +269,8 @@ material/7 = null
 
 [node name="coach_wagon" type="MeshInstance" parent="KinematicBody"]
 transform = Transform( 100, 0, 0, 0, 5.96046e-06, 100, 0, -100, 5.96046e-06, 0, 0, 0 )
+visible = false
+cast_shadow = 2
 mesh = SubResource( 2 )
 material/0 = null
 material/1 = null
@@ -290,6 +281,7 @@ material/5 = null
 
 [node name="floor" type="MeshInstance" parent="KinematicBody"]
 transform = Transform( 1, 0, 0, 0, 1, -1.64905e-07, 0, 1.64905e-07, 1, 0, 0.311676, 0 )
+cast_shadow = 2
 mesh = SubResource( 3 )
 material/0 = SubResource( 4 )
 
@@ -313,42 +305,38 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 4 )
 [node name="left" type="Position3D" parent="KinematicBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4 )
 
-[node name="FrontLight" type="Spatial" parent="KinematicBody"]
-visible = false
-
-[node name="SpotLight" type="SpotLight" parent="KinematicBody/FrontLight"]
-transform = Transform( -1, 1.77636e-15, -8.74228e-08, -2.26267e-08, 0.965926, 0.258819, 8.44439e-08, 0.258819, -0.965926, 0, 0.554103, 2 )
-light_energy = 10.0
-spot_range = 20.0
-spot_attenuation = 0.999997
-spot_angle = 60.0
-
-[node name="MeshInstance" type="MeshInstance" parent="KinematicBody/FrontLight"]
-transform = Transform( 100, 0, 0, 0, -46.1687, 88.7043, 0, -88.7043, -46.1687, -0.353942, 0.493751, 1.82245 )
-mesh = SubResource( 6 )
-material/0 = SubResource( 7 )
-
-[node name="MeshInstance2" type="MeshInstance" parent="KinematicBody/FrontLight"]
-transform = Transform( 100, 0, 0, 0, -44.1584, 89.722, 0, -89.722, -44.1584, 0.36894, 0.493751, 1.82245 )
-mesh = SubResource( 6 )
-material/0 = SubResource( 7 )
-
 [node name="RayCast" type="RayCast" parent="KinematicBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.02531, 2 )
 enabled = true
 cast_to = Vector3( 0, 0, 3 )
 collision_mask = 524288
 
+[node name="StationSeeker_right" type="RayCast" parent="KinematicBody"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 1.025, 0 )
+enabled = true
+cast_to = Vector3( 0, 0, 3 )
+collision_mask = 4
+collide_with_areas = true
+collide_with_bodies = false
+
+[node name="StationSeeker_left" type="RayCast" parent="KinematicBody"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 1.025, 0 )
+enabled = true
+cast_to = Vector3( 0, 0, 3 )
+collision_mask = 4
+collide_with_areas = true
+collide_with_bodies = false
+
 [node name="spreader" type="StaticBody" parent="KinematicBody"]
-collision_layer = 524288
-collision_mask = 524288
+collision_layer = 524800
+collision_mask = 524800
 
 [node name="CollisionShape" type="CollisionShape" parent="KinematicBody/spreader"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0 )
-shape = SubResource( 8 )
+shape = SubResource( 6 )
 
 [node name="Path" type="Path" parent="."]
-curve = SubResource( 9 )
+curve = SubResource( 7 )
 
 [node name="PathFollow" type="PathFollow" parent="Path"]
 rotation_mode = 4
@@ -356,20 +344,15 @@ loop = false
 
 [node name="marker1" type="MeshInstance" parent="Path"]
 visible = false
-mesh = SubResource( 11 )
+mesh = SubResource( 9 )
 material/0 = null
 
 [node name="marker2" type="MeshInstance" parent="Path"]
 visible = false
-mesh = SubResource( 13 )
+mesh = SubResource( 11 )
 material/0 = null
 
 [node name="marker3" type="MeshInstance" parent="Path"]
 visible = false
-mesh = SubResource( 14 )
-material/0 = SubResource( 15 )
-
-[node name="MeshInstance" type="MeshInstance" parent="."]
-visible = false
-mesh = SubResource( 16 )
-material/0 = null
+mesh = SubResource( 12 )
+material/0 = SubResource( 13 )

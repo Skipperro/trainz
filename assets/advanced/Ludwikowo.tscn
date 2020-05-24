@@ -38,8 +38,10 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 469, 0, 0 )
 transform = Transform( -2.18557e-07, 0, 1, 0, 1, 0, -1, 0, -2.18557e-07, -200, 1, 8 )
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
-transform = Transform( 0.781942, -0.336905, 0.524464, 0.211384, 0.934822, 0.285352, -0.586416, -0.112266, 0.802192, 0, 14.5696, 0 )
+transform = Transform( 0.781942, -0.336906, 0.524463, 0.0620041, 0.879225, 0.472354, -0.62026, -0.336835, 0.708393, 0, 14.5696, 0 )
+light_energy = 1.34
 shadow_enabled = true
+shadow_color = Color( 0.368627, 0.368627, 0.368627, 1 )
 directional_shadow_mode = 0
 directional_shadow_normal_bias = 0.0
 directional_shadow_bias_split_scale = 0.0
